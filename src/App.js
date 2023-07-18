@@ -32,7 +32,7 @@ import {
   ViewImage,
   ButtonBrowser,
   ButtonLearnMore,
-  ViewTipTricks,
+  ViewPopularCategories,
   ListPopular,
   ItemList,
   ViewItemPopular,
@@ -47,6 +47,31 @@ import {
   PriceSaleOff,
   Cost,
   ViewRow,
+  SubTitle,
+  Span,
+  ViewSubTitle,
+  ButtonLearnMorePopular,
+  ListPopularCategories,
+  ItemListPopularCategories,
+  ViewItemPopularCategories,
+  ViewTitle,
+  TextId,
+  ButtonArrow,
+  ViewContainerPopularCategories,
+  ViewListNewProduct,
+  ButtonLearnMoreNewProduct,
+  ViewNewProduct,
+  JoinBrand,
+  AuthText,
+  SpanAuthText,
+  ButtonSignUp,
+  ButtonSignIn,
+  ViewTipTrick,
+  ListTipsTrick,
+  ViewItemTipsTrick,
+  ImageTipsTrick,
+  NameTipsTrick,
+  ContentTipsTrick,
 } from "./styled";
 import logo from "./logo.png";
 import {
@@ -54,152 +79,24 @@ import {
   AiOutlineShoppingCart,
   AiOutlineHeart,
   AiOutlineCaretDown,
+  AiOutlineArrowRight,
 } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const slideImages = [
-  {
-    url: "https://autopro8.mediacdn.vn/2020/6/4/bentley-mulsanne-6-75-edition-by-mulliner-15912091080101685794314.jpg",
-    caption: "Slide 1",
-  },
-  {
-    url: "https://assets.newatlas.com/dims4/default/c8f9910/2147483647/strip/true/crop/1920x1080+0+0/resize/1920x1080!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fintel-engine-2.png",
-    caption: "Slide 2",
-  },
-  {
-    url: "https://www.ge.com/digital/sites/default/files/2018-08/header-digital-twin-illustration-3200x1404.jpg",
-    caption: "Slide 3",
-  },
-];
-
-const mockDataPopular = [
-  {
-    id: 1,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: true,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 2,
-    like: false,
-    discount: 20,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 3,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 4,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: true,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 5,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 6,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: true,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 7,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 8,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 9,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 10,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-  {
-    id: 11,
-    like: false,
-    discount: 10,
-    imageUrl: "https://genk.mediacdn.vn/2014/1-7685-1400680963690.jpg",
-    name: "5.4L Supercharged V8",
-    isNew: false,
-    category: "Engine",
-    price: "500.000$",
-    priceDiscount: "399.000$",
-  },
-];
+import {
+  slideImages,
+  slideAuth,
+  mockDataPopular,
+  mockDataCategory,
+  mockDataTipsTrick,
+} from "./mockData";
 
 function App() {
   const containerRef = useRef(null);
+  const newProductRef = useRef(null);
+  const bestSellersRef = useRef(null);
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
@@ -277,10 +174,10 @@ function App() {
     </ViewChildFilter>
   );
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e, ref) => {
     setIsDown(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
+    setStartX(e.pageX - ref.current.offsetLeft);
+    setScrollLeft(ref.current.scrollLeft);
   };
 
   const handleMouseLeave = () => {
@@ -291,12 +188,12 @@ function App() {
     setIsDown(false);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e, ref) => {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
+    const x = e.pageX - ref.current.offsetLeft;
     const walk = (x - startX) * 1; // Tăng tốc độ cuộn
-    containerRef.current.scrollLeft = scrollLeft - walk;
+    ref.current.scrollLeft = scrollLeft - walk;
   };
 
   const renderPopular = () => (
@@ -339,10 +236,10 @@ function App() {
       </ViewSearch>
       <ListPopular
         ref={containerRef}
-        onMouseDown={handleMouseDown}
+        onMouseDown={(e) => handleMouseDown(e, containerRef)}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
+        onMouseMove={(e) => handleMouseMove(e, containerRef)}
       >
         {mockDataPopular?.map((e) => (
           <ItemList key={e?.id}>
@@ -353,7 +250,7 @@ function App() {
                   <AiOutlineHeart color="gray" size={25} />
                 </Button>
               </ViewSaleOff>
-              <ImageSaleOff src="https://thuviendohoa.vn/upload/images/items/hinh-anh-vanh-banh-xe-o-to-xe-hoi-png-365.webp" />
+              <ImageSaleOff src={e?.imageUrl} />
               {e?.isNew && <ViewNew>NEW</ViewNew>}
               <NamePopular style={{ marginTop: e?.isNew ? 10 : 44 }}>
                 {e?.name}
@@ -375,13 +272,191 @@ function App() {
     </ViewPopular>
   );
 
-  const renderTipTricks = () => <ViewTipTricks></ViewTipTricks>;
+  const renderListNewProduct = () => (
+    <ViewContainerPopularCategories>
+      <ViewListNewProduct>
+        <TextTitle style={{ fontSize: 35, color: "black" }}>
+          New products
+        </TextTitle>
+        <ButtonLearnMoreNewProduct>Learn more</ButtonLearnMoreNewProduct>
+      </ViewListNewProduct>
+      <ListPopular
+        ref={newProductRef}
+        onMouseDown={(e) => handleMouseDown(e, newProductRef)}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={(e) => handleMouseMove(e, newProductRef)}
+      >
+        {mockDataPopular?.map((e) => (
+          <ItemList key={e?.id}>
+            <ViewItemPopular>
+              <ViewSaleOff>
+                <TextSaleOff>{e?.discount}%</TextSaleOff>
+                <Button>
+                  <AiOutlineHeart color="gray" size={25} />
+                </Button>
+              </ViewSaleOff>
+              <ImageSaleOff src={e?.imageUrl} />
+              {e?.isNew && <ViewNew>NEW</ViewNew>}
+              <NamePopular style={{ marginTop: e?.isNew ? 10 : 44 }}>
+                {e?.name}
+              </NamePopular>
+              <Category>{e?.category}</Category>
+              <ViewSaleOff>
+                <ViewRow>
+                  <PriceSaleOff>{e?.priceDiscount}</PriceSaleOff>
+                  <Cost>{e?.price}</Cost>
+                </ViewRow>
+                <Button style={{ marginTop: 13 }}>
+                  <AiOutlineShoppingCart color="gray" size={25} />
+                </Button>
+              </ViewSaleOff>
+            </ViewItemPopular>
+          </ItemList>
+        ))}
+      </ListPopular>
+    </ViewContainerPopularCategories>
+  );
+
+  const renderPopularCategories = () => (
+    <ViewPopularCategories>
+      <ViewSubTitle>
+        <TextTitle
+          style={{
+            fontSize: 35,
+            color: "black",
+            marginBottom: 10,
+          }}
+        >
+          Popular
+          <br />
+          categories
+        </TextTitle>
+        <SubTitle>
+          Now you can browse form <Span>150,000 products</Span> in an ease way.
+          Choose your category and find what you are looking for.
+        </SubTitle>
+        <ButtonLearnMorePopular>Learn more</ButtonLearnMorePopular>
+      </ViewSubTitle>
+      <ListPopularCategories>
+        {mockDataCategory.map((e) => (
+          <ItemListPopularCategories key={e?.id}>
+            <ViewItemPopularCategories imgUrl={e?.imgUrl}>
+              <ViewTitle>
+                <TextId>{e?.id}</TextId>
+                <TextTitle
+                  style={{ margin: 0, fontSize: "1.8vw", width: "10vw" }}
+                >
+                  {e?.title}
+                </TextTitle>
+              </ViewTitle>
+              <ButtonArrow>
+                <AiOutlineArrowRight color="white" size={25} />
+              </ButtonArrow>
+            </ViewItemPopularCategories>
+          </ItemListPopularCategories>
+        ))}
+      </ListPopularCategories>
+    </ViewPopularCategories>
+  );
+
+  const renderAuth = () => (
+    <ViewNewProduct>
+      <ContainerSlide>
+        <ViewText>
+          <JoinBrand>Join LongCar!</JoinBrand>
+          <AuthText>
+            Browse now from
+            <br />
+            <SpanAuthText>over 150 000 parts</SpanAuthText>
+          </AuthText>
+          <ViewRow style={{ marginTop: 50 }}>
+            <ButtonSignUp>Sign up</ButtonSignUp>
+            <ButtonSignIn>Sign in</ButtonSignIn>
+          </ViewRow>
+        </ViewText>
+        <ViewImage>
+          <Slide arrows={false}>
+            {slideAuth.map((slideImage, index) => (
+              <ImageSlide key={index} imageUrl={slideImage.url} />
+            ))}
+          </Slide>
+        </ViewImage>
+      </ContainerSlide>
+      <ViewSearch style={{ marginTop: 20 }}>
+        <TextTitle style={{ fontSize: 35 }}>Bestsellers</TextTitle>
+        <ButtonLearnMore>Learn more</ButtonLearnMore>
+      </ViewSearch>
+      <ListPopular
+        ref={bestSellersRef}
+        onMouseDown={(e) => handleMouseDown(e, bestSellersRef)}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={(e) => handleMouseMove(e, bestSellersRef)}
+      >
+        {mockDataPopular?.map((e) => (
+          <ItemList key={e?.id}>
+            <ViewItemPopular>
+              <ViewSaleOff>
+                <TextSaleOff>{e?.discount}%</TextSaleOff>
+                <Button>
+                  <AiOutlineHeart color="gray" size={25} />
+                </Button>
+              </ViewSaleOff>
+              <ImageSaleOff src={e?.imageUrl} />
+              {e?.isNew && <ViewNew>NEW</ViewNew>}
+              <NamePopular style={{ marginTop: e?.isNew ? 10 : 44 }}>
+                {e?.name}
+              </NamePopular>
+              <Category>{e?.category}</Category>
+              <ViewSaleOff>
+                <ViewRow>
+                  <PriceSaleOff>{e?.priceDiscount}</PriceSaleOff>
+                  <Cost>{e?.price}</Cost>
+                </ViewRow>
+                <Button style={{ marginTop: 13 }}>
+                  <AiOutlineShoppingCart color="gray" size={25} />
+                </Button>
+              </ViewSaleOff>
+            </ViewItemPopular>
+          </ItemList>
+        ))}
+      </ListPopular>
+    </ViewNewProduct>
+  );
+
+  const renderTipTrick = () => (
+    <ViewTipTrick>
+      <ViewListNewProduct>
+        <TextTitle style={{ fontSize: 35, color: "black" }}>
+          Tips & tricks
+        </TextTitle>
+        <ButtonLearnMoreNewProduct>Learn more</ButtonLearnMoreNewProduct>
+      </ViewListNewProduct>
+      <ListTipsTrick>
+        {mockDataTipsTrick?.map((e) => (
+          <ItemList key={e?.id} style={{ marginRight: 0 }}>
+            <ViewItemTipsTrick>
+              <ImageTipsTrick imgUrl={e?.imageUrl}>
+                <TextSaleOff style={{ marginTop: 30 }}>{e?.date}</TextSaleOff>
+              </ImageTipsTrick>
+              <NameTipsTrick>{e?.title}</NameTipsTrick>
+              <ContentTipsTrick>{e?.content}</ContentTipsTrick>
+            </ViewItemTipsTrick>
+          </ItemList>
+        ))}
+      </ListTipsTrick>
+    </ViewTipTrick>
+  );
 
   return (
     <Container>
       {renderHeader()}
       {renderPopular()}
-      {renderTipTricks()}
+      {renderPopularCategories()}
+      {renderListNewProduct()}
+      {renderAuth()}
+      {renderTipTrick()}
     </Container>
   );
 }

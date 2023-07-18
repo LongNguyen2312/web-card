@@ -81,7 +81,7 @@ export const ViewSearch = styled.div`
 export const TextTitle = styled.p`
   font-size: 19px;
   color: white;
-  font-weight: bold;
+  font-weight: 500;
 `;
 
 export const TextPlaceHolder = styled.p`
@@ -282,10 +282,10 @@ export const ButtonLearnMore = styled.button`
   font-size: 14px;
 `;
 
-export const ViewTipTricks = styled.div`
-  background-color: #ddd;
-  padding: 10px 8% 20px 8%;
-  height: 500px;
+export const ViewPopularCategories = styled.div`
+  background-color: rgb(237, 237, 237);
+  padding: 250px 8% 20px 8%;
+  display: flex;
 `;
 
 export const ListPopular = styled.ul`
@@ -388,4 +388,211 @@ export const Cost = styled.p`
 export const ViewRow = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const SubTitle = styled.p`
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+`;
+
+export const Span = styled.span`
+  font-size: 19px;
+  color: rgb(47, 116, 246);
+`;
+
+export const ViewSubTitle = styled.div`
+  width: 20%;
+`;
+
+export const ButtonLearnMorePopular = styled.button`
+  background: none;
+  border: 1px solid rgb(187, 187, 187);
+  padding: 10px 20px 10px 20px;
+  &:hover {
+    background-color: rgb(183, 183, 183);
+  }
+  font-size: 14px;
+  margin-top: 10px;
+`;
+
+export const ListPopularCategories = styled.ul`
+  display: flex;
+  list-style: none;
+  flex: 1;
+  flex-direction: column;
+`;
+
+export const ItemListPopularCategories = styled.li`
+  margin-bottom: 30px;
+`;
+
+export const ViewItemPopularCategories = styled.div`
+  background-image: ${(props) =>
+    props?.imgUrl ? `url(${props?.imgUrl})` : ""};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  height: 210px;
+  flex: 1;
+  background-size: cover;
+  margin: 0px 0px 0px 10vw;
+  background-position: center;
+`;
+
+export const ViewTitle = styled.div`
+  display: flex;
+  padding: 0px 0px 20px 0px;
+`;
+
+export const TextId = styled.p`
+  font-size: 17px;
+  color: rgb(183, 183, 183);
+  margin: 10px 30px 0px 4vw;
+  font-weight: 600;
+`;
+
+export const ButtonArrow = styled.button`
+  padding: 20px 25px 20px 25px;
+  background-color: rgb(47, 116, 246, 0.9);
+  &:hover {
+    background-color: rgb(47, 116, 246);
+  }
+  border: none;
+  margin-right: 30px;
+`;
+
+export const ViewContainerPopularCategories = styled.div`
+  background-color: rgb(237, 237, 237);
+  padding: 30px 8% 100px 8%;
+`;
+
+export const ViewListNewProduct = styled.div`
+  background-color: rgb(237, 237, 237);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ButtonLearnMoreNewProduct = styled.button`
+  background: none;
+  border: 1px solid rgb(187, 187, 187);
+  &:hover {
+    background-color: rgb(183, 183, 183);
+  }
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+`;
+
+export const ViewNewProduct = styled.div`
+  background-color: rgba(0, 0, 0);
+  padding: 200px 8% 50px 8%;
+`;
+
+export const JoinBrand = styled.p`
+  font-size: 15px;
+  color: rgb(183, 183, 183);
+  font-weight: bold;
+  font-family: sans-serif;
+`;
+
+export const AuthText = styled.p`
+  font-size: 3.5vw;
+  color: white;
+  z-index: 999;
+  width: 50vw;
+  margin: 20px 0px 0px 0px;
+  font-weight: 300;
+`;
+
+export const SpanAuthText = styled.span`
+  font-size: 3.5vw;
+  color: white;
+  z-index: 999;
+  width: 50vw;
+  margin: 0;
+  font-weight: 600;
+`;
+
+export const ButtonSignUp = styled.button`
+  padding: 1vw 3vw 1vw 3vw;
+  background-color: rgb(47, 116, 246, 0.9);
+  &:hover {
+    background-color: rgb(47, 116, 246);
+  }
+  color: white;
+  font-size: 1vw;
+  border: none;
+  margin-right: 5px;
+  border: none;
+`;
+
+export const ButtonSignIn = styled.button`
+  padding: 1vw 3vw 1vw 3vw;
+  background: none;
+  color: white;
+  font-size: 1vw;
+  border: none;
+  border: 1px solid rgb(50, 50, 50);
+  &:hover {
+    background-color: rgb(50, 50, 50);
+  }
+`;
+
+export const ViewTipTrick = styled.div`
+  background-color: rgb(237, 237, 237);
+  padding: 250px 8% 20px 8%;
+`;
+
+export const ListTipsTrick = styled.ul`
+  display: flex;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  justify-content: space-between;
+`;
+
+export const ViewItemTipsTrick = styled.button`
+  width: 26vw;
+  background-color: white;
+  border: none;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  padding-bottom: 10px;
+  background: none;
+`;
+
+export const ImageTipsTrick = styled.div`
+  display: flex;
+  background-image: ${(props) =>
+    props?.imgUrl ? `url(${props?.imgUrl})` : ""};
+  width: 100%;
+  height: 300px;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+`;
+
+export const NameTipsTrick = styled.p`
+  font-size: 17px;
+  font-weight: bold;
+  margin: 30px 0px 0px 0px;
+  text-align: left;
+  width: 85%;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  word-spacing: 1.3px;
+`;
+
+export const ContentTipsTrick = styled.p`
+  font-size: 14px;
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
 `;
