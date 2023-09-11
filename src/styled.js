@@ -204,6 +204,7 @@ export const ButtonSearch = styled.button`
   border: none;
   &:hover {
     background-color: rgb(47, 116, 246);
+    cursor: pointer;
   }
 `;
 
@@ -268,6 +269,7 @@ export const ButtonBrowser = styled.button`
   border: none;
   &:hover {
     background-color: rgb(47, 116, 246);
+    cursor: pointer;
   }
 `;
 
@@ -278,6 +280,7 @@ export const ButtonLearnMore = styled.button`
   padding: 10px 20px 10px 20px;
   &:hover {
     background-color: rgb(30, 30, 30);
+    cursor: pointer;
   }
   font-size: 14px;
 `;
@@ -310,6 +313,9 @@ export const ViewItemPopular = styled.button`
   padding: 0;
   flex-direction: column;
   padding-bottom: 10px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ViewSaleOff = styled.div`
@@ -331,6 +337,9 @@ export const TextSaleOff = styled.p`
 export const Button = styled.button`
   border: none;
   background: none;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ImageSaleOff = styled.img`
@@ -412,6 +421,7 @@ export const ButtonLearnMorePopular = styled.button`
   padding: 10px 20px 10px 20px;
   &:hover {
     background-color: rgb(183, 183, 183);
+    cursor: pointer;
   }
   font-size: 14px;
   margin-top: 10px;
@@ -459,6 +469,7 @@ export const ButtonArrow = styled.button`
   background-color: rgb(47, 116, 246, 0.9);
   &:hover {
     background-color: rgb(47, 116, 246);
+    cursor: pointer;
   }
   border: none;
   margin-right: 30px;
@@ -481,6 +492,7 @@ export const ButtonLearnMoreNewProduct = styled.button`
   border: 1px solid rgb(187, 187, 187);
   &:hover {
     background-color: rgb(183, 183, 183);
+    cursor: pointer;
   }
   font-size: 14px;
   padding: 10px 20px 10px 20px;
@@ -521,6 +533,7 @@ export const ButtonSignUp = styled.button`
   background-color: rgb(47, 116, 246, 0.9);
   &:hover {
     background-color: rgb(47, 116, 246);
+    cursor: pointer;
   }
   color: white;
   font-size: 1vw;
@@ -538,6 +551,7 @@ export const ButtonSignIn = styled.button`
   border: 1px solid rgb(50, 50, 50);
   &:hover {
     background-color: rgb(50, 50, 50);
+    cursor: pointer;
   }
 `;
 
@@ -564,6 +578,9 @@ export const ViewItemTipsTrick = styled.button`
   flex-direction: column;
   padding-bottom: 10px;
   background: none;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ImageTipsTrick = styled.div`
@@ -595,4 +612,155 @@ export const ContentTipsTrick = styled.p`
   line-height: 1.5;
   letter-spacing: 0.5px;
   word-spacing: 2px;
+`;
+
+export const ViewPartner = styled.div`
+  background-color: white;
+  padding: 60px 15% 60px 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const ImageLogoPartner = styled.img`
+  width: 70px;
+  height: 70px;
+  align-self: center;
+`;
+
+export const ViewPrivacyPolicy = styled.div`
+  background-color: black;
+  padding: 40px 8% 40px 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const TextNewsletter = styled.p`
+  font-size: 2.5vw;
+  color: white;
+`;
+
+export const TextSubTitle = styled.p`
+  width: 17vw;
+  color: white;
+  font-size: 1vw;
+`;
+
+export const InputEmail = styled.input`
+  width: 20vw;
+  color: white;
+  font-size: 1vw;
+  background-color: rgb(50, 50, 50);
+  border: none;
+  padding: 15px 15px 15px 15px;
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const CheckBox = styled.button`
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  border-color: rgb(47, 116, 246);
+  border-radius: 3px;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const CheckBoxChildren = styled.div`
+  width: 15px;
+  height: 6px;
+  background-color: rgb(47, 116, 246);
+`;
+
+export const TextPrivacy = styled.p`
+  width: 10vw;
+  color: white;
+  font-size: 0.9vw;
+  margin: -3px 0px 0px 13px;
+  font-weight: normal;
+`;
+
+export const ContainerPrivacy = styled.div`
+  display: flex;
+`;
+
+export const ViewBelow = styled.div`
+  background-color: rgb(237, 237, 237);
+  padding: 40px 8% 40px 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 300px;
+`;
+
+export const ViewChildBelow = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+`;
+
+export const TextBrand = styled.p`
+  width: 10vw;
+  color: black;
+  font-size: 2vw;
+  font-weight: bold;
+  font-style: italic;
+  margin: 25px 0px 20px 0px;
+`;
+
+export const ContentBelow = styled.p`
+  width: 10vw;
+  font-size: 0.9vw;
+  font-weight: 450;
+  margin: 0px 0px 5px 0px;
+`;
+
+export const ButtonSocial = styled.button`
+  border: none;
+  background: none;
+  padding: 0px 0px 0px 0px;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const TextTitleBelow = styled.p`
+  color: black;
+  font-size: 1vw;
+  font-weight: bold;
+  margin: 30px 0px 20px 0px;
+`;
+
+export const ContentLinkBelow = styled.a`
+  width: 10vw;
+  font-size: 0.9vw;
+  font-weight: 400;
+  margin: 0px 0px 5px 0px;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: rgb(47, 116, 246);
+  }
+`;
+
+export const ContentTextBelow = styled.p`
+  font-size: 0.9vw;
+  font-weight: 400;
+  margin: 0px 0px 5px 0px;
+`;
+
+export const ImageAlliance = styled.img`
+  width: 10vw;
+  height: 2vw;
+  margin-top: 15px;
 `;

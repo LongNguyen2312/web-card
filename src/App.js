@@ -72,6 +72,25 @@ import {
   ImageTipsTrick,
   NameTipsTrick,
   ContentTipsTrick,
+  ViewPartner,
+  ImageLogoPartner,
+  ViewPrivacyPolicy,
+  TextNewsletter,
+  TextSubTitle,
+  InputEmail,
+  CheckBox,
+  CheckBoxChildren,
+  TextPrivacy,
+  ContainerPrivacy,
+  ViewBelow,
+  TextBrand,
+  ViewChildBelow,
+  ContentBelow,
+  ButtonSocial,
+  TextTitleBelow,
+  ContentLinkBelow,
+  ContentTextBelow,
+  ImageAlliance,
 } from "./styled";
 import logo from "./logo.png";
 import {
@@ -80,7 +99,10 @@ import {
   AiOutlineHeart,
   AiOutlineCaretDown,
   AiOutlineArrowRight,
+  AiFillTwitterCircle,
+  AiFillInstagram,
 } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 import { BiChevronDown } from "react-icons/bi";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -100,6 +122,7 @@ function App() {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
+  const [isCheckPrivacy, setIsCheckPrivacy] = useState(true);
 
   const renderButtonMenu = (title, onClick) => (
     <ButtonMenu onClick={onClick}>
@@ -449,6 +472,124 @@ function App() {
     </ViewTipTrick>
   );
 
+  const renderPartner = () => (
+    <ViewPartner>
+      <ImageLogoPartner
+        src={
+          "https://hondagiaiphong.net/images/2020/Tintuc2020/58-logo-hang-xe/bmw.png"
+        }
+      />
+      <ImageLogoPartner
+        src={
+          "https://uploads-ssl.webflow.com/5e816c9393b099b3300a0930/5eb524e58e32f52730d7a5c0_logo-cadillac.png"
+        }
+      />
+      <ImageLogoPartner
+        src={
+          "https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-suzuki-inkythuatso-2-01-15-15-18-29.jpg"
+        }
+      />
+      <ImageLogoPartner
+        src={
+          "https://inkythuatso.com/uploads/images/2021/10/logo-vinfast-inkythuatso-21-11-08-55.jpg"
+        }
+      />
+      <ImageLogoPartner
+        src={
+          "https://marque-voiture.com/wp-content/uploads/2016/05/Chevrolet-Logo.png"
+        }
+      />
+      <ImageLogoPartner
+        src={
+          "https://nhaxelimousine.com/wp-content/uploads/2021/11/logo-cac-hang-xe-o-to-5.jpg"
+        }
+      />
+    </ViewPartner>
+  );
+
+  const renderPrivacyPolicy = () => (
+    <ViewPrivacyPolicy>
+      <TextNewsletter>Newsletter</TextNewsletter>
+      <TextSubTitle>
+        Receive information about the latest promotions and products.
+      </TextSubTitle>
+      <InputEmail placeholder="Your email address" />
+      <ContainerPrivacy>
+        <CheckBox onClick={() => setIsCheckPrivacy(!isCheckPrivacy)}>
+          {isCheckPrivacy && <CheckBoxChildren />}
+        </CheckBox>
+        <TextPrivacy>
+          I agree that i have read and consented to the given{" "}
+          <a href="https://support.thinkific.com/hc/en-us/articles/360030355714-Sample-Privacy-Policy">
+            <span style={{ textDecoration: "underline" }}>Privacy Policy.</span>
+          </a>
+        </TextPrivacy>
+      </ContainerPrivacy>
+      <ButtonSignUp style={{ fontSize: "1.1vw", fontWeight: "bold" }}>
+        Join now
+      </ButtonSignUp>
+    </ViewPrivacyPolicy>
+  );
+
+  const renderBelow = () => (
+    <ViewBelow>
+      <ViewChildBelow>
+        <TextBrand>Long Car</TextBrand>
+        <ContentBelow>longnv.main@gmail.com</ContentBelow>
+        <ContentBelow>+84984087956</ContentBelow>
+        <ContentBelow>Mo-Fr: 9:00-21:00</ContentBelow>
+        <ViewRow style={{ marginTop: 20 }}>
+          <ButtonSocial>
+            <BsFacebook color="rgb(47, 116, 246)" size={30} />
+          </ButtonSocial>
+          <ButtonSocial>
+            <AiFillTwitterCircle
+              color="rgb(47, 116, 246)"
+              size={34}
+              style={{ marginLeft: 5 }}
+            />
+          </ButtonSocial>
+          <ButtonSocial>
+            <AiFillInstagram
+              color="rgb(47, 116, 246)"
+              size={35}
+              style={{ marginLeft: 3, marginBottom: -1 }}
+            />
+          </ButtonSocial>
+        </ViewRow>
+      </ViewChildBelow>
+      <ViewChildBelow>
+        <TextTitleBelow>INFOMATIONS</TextTitleBelow>
+        <ContentLinkBelow href="">About</ContentLinkBelow>
+        <ContentLinkBelow href="">Terms of use</ContentLinkBelow>
+        <ContentLinkBelow href="">Privacy Policy</ContentLinkBelow>
+        <ContentLinkBelow href="">Cookies</ContentLinkBelow>
+        <ContentLinkBelow href="">Reviews</ContentLinkBelow>
+        <ContentLinkBelow href="">Media</ContentLinkBelow>
+        <ContentLinkBelow href="">Contact</ContentLinkBelow>
+      </ViewChildBelow>
+      <ViewChildBelow>
+        <TextTitleBelow>CUSTOMER SERVICE</TextTitleBelow>
+        <ContentLinkBelow href="">customer dashboard</ContentLinkBelow>
+        <ContentLinkBelow href="">Check my delivery</ContentLinkBelow>
+        <ContentLinkBelow href="">Payment methods</ContentLinkBelow>
+        <ContentLinkBelow href="">Delivery details</ContentLinkBelow>
+        <ContentLinkBelow href="">Complaints</ContentLinkBelow>
+      </ViewChildBelow>
+      <ViewChildBelow>
+        <TextTitleBelow>DATA PROTECTION</TextTitleBelow>
+        <ContentTextBelow>
+          The data provided here, especially the entire database, cannot be
+          copied. It is forbidden to copy all or part of the data or the entire
+          database, disseminate or pass on to third parties without the prior
+          consent of TecDoc. Breaking the rules is a violation copyright and
+          will be legally prosecuted
+        </ContentTextBelow>
+        <ImageAlliance src="https://global-uploads.webflow.com/62c8aef41d869e19c9fb8f84/62f581e9915f95c99a940b1d_ncw-tech.png" />
+      </ViewChildBelow>
+    </ViewBelow>
+  );
+
   return (
     <Container>
       {renderHeader()}
@@ -457,6 +598,9 @@ function App() {
       {renderListNewProduct()}
       {renderAuth()}
       {renderTipTrick()}
+      {renderPartner()}
+      {renderPrivacyPolicy()}
+      {renderBelow()}
     </Container>
   );
 }
